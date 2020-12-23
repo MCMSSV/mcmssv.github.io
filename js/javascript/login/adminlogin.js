@@ -1,3 +1,4 @@
+ErrorCnt = 0
 function checklogin(){
 				var v = grecaptcha.getResponse();
 				if (v.length ==0) {
@@ -5,7 +6,15 @@ function checklogin(){
 					return false;
 				} else {
 					
-					alert(adminid.value);
+					var id_box = adminid.value
+					var pw_box = adminpw.value
+					var profile_id = "admin"
+					var profile_pw = "mcmssv05300524"
 					return false;
+					if(profile_id == id_box && profile_pw == pw_box){
+					alert("로그인성공")
+					}else{
+					alert("로그인실패")
+					}
 				}
 			}
