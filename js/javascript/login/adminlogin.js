@@ -10,7 +10,7 @@ function checklogin(){
 					var pw_box = adminpw.value
 					var profile_id = "admin"
 					var profile_pw = "mcmssv05300524"
-					return false;
+					return true;
 					if(profile_id == id_box && profile_pw == pw_box){
 					alert("로그인성공")
 					}else{
