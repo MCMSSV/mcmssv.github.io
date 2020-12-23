@@ -5,6 +5,6 @@ function checklogin(){
 					return false;
 				} else {
 					location.reload();
-					alert(userid.value);
+					alert(adminid.value);
 				}
 			}
