@@ -3,14 +3,18 @@
 <head>
 <meta charset="utf-8">
   <title>LOGIN</title>
+  <script src="js/javascript/login/adminlogin.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
   <link rel="stylesheet" href="css/style/login/style.css">
 </head>
 <body>
-  <form class="box" action="return checklogin();" method="post">
+  <form class="box" action="checklogin();" method="post">
   <h1>ADMIN으로 로그인</h1>
-    <input type="text" name="" placeholder="USERNAME">
-    <input type="password" name="" placeholder="PASSWORD">
-    <input type="submit" name="" value="Login">
+    <input type="text" name="" placeholder="USERNAME" id="adminid">
+    <input type="password" name="" placeholder="PASSWORD" id="adminpw">
+    <div class="g-recaptcha" data-sitekey="6LfTcPAZAAAAABp0KODzljSH42FhVV6HFvxPsCUL"></div>
+    <input type="submit" name="" value="Login" id="Login">
   </form>
 </body>
+  
 </html>
