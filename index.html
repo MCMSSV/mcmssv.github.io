@@ -6,7 +6,47 @@
     <title>MS서버 공식 웹사이트</title>
    <meta charset="utf-8">
   </head>
+  <script>
+  function checkdownload(){
+ const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false
+})
+
+swalWithBootstrapButtons.fire({
+  title: '다운로드 확인',
+  text: "정말로 Castor's PvP Resourcepack을 다운로드받으실건가요?",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonText: '네 다운로드받을게요!',
+  cancelButtonText: '아니요 다운로드하지 않겠습니다!',
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {1
+    swalWithBootstrapButtons.fire(
+      '다운로드 성공!',
+      '리소스팩을 다운로드했습니다!',
+      'success'
+      return true;
+    )
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire(
+      '취소됨',
+      '성공적으로 취소되었습니다',
+      'success'
+      return false;
+    )
+  }
+})
+  }
+  </script>
   <body>
-  <a href="https://download1323.mediafire.com/ggfaettyq6ug/w5wdswd2kct5kyd/castors+pvp+resourcepack+%282%29.zip" class="Resourcepackdownloadbutton" target="_blank">Castor's PvP Resourcepack Download</a>
+  <a href="https://download1323.mediafire.com/ggfaettyq6ug/w5wdswd2kct5kyd/castors+pvp+resourcepack+%282%29.zip" class="Resourcepackdownloadbutton" target="_blank" onclick="return checkdownload();">Castor's PvP Resourcepack Download</a>
   </body>
 </html>
