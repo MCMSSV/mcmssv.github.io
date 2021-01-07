@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="css/index/style.css">
+    <title>MS서버 공식 웹사이트</title>
+   <meta charset="utf-8">
+  </head>
+  <script>
+  function checkdownload(){
+ Swal.fire({
+  title: '정말 리소스팩을 다운로드받으시겠어요?',
+  text: "잘못 클릭했다면 취소버튼을 눌러주세요!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  cancelButtonText: '취소',
+  confirmButtonText: '계속'
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire(
+      '확인됨!',
+      '<a href="http://blogattach.naver.net/0e9b12a1bbefea361afd9dac91700571d1847d9c6b/20210107_98_blogfile/jadecarver_1610005803685_o6814U_zip/castors+pvp+resourcepack+%282%29.zip">이 링크를 클릭하여</a> 다운로드받으세요!',
+      'success'
+    )
+  }
+})
+  }
+  </script>
+  <body>
+  <button class="Resourcepackdownloadbutton" onclick="checkdownload();">Castor's PvP Resourcepack Download</a>
+  </body>
+</html>
