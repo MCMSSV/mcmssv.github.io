@@ -8,37 +8,19 @@
   </head>
   <script>
   function checkdownload(){
- const swalWithBootstrapButtons = Swal.mixin({
-  customClass: {
-    confirmButton: 'btn btn-success',
-    cancelButton: 'btn btn-danger'
-  },
-  buttonsStyling: false
-})
-
-swalWithBootstrapButtons.fire({
-  title: '다운로드 확인',
-  text: "정말로 Castor's PvP Resourcepack을 다운로드받으실건가요?",
+ Swal.fire({
+  title: 'Are you sure?',
+  text: "You won't be able to revert this!",
   icon: 'warning',
   showCancelButton: true,
-  confirmButtonText: '네 다운로드받을게요!',
-  cancelButtonText: '아니요 다운로드하지 않겠습니다!',
-  reverseButtons: true
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes, delete it!'
 }).then((result) => {
-  if (result.isConfirmed) {1
-    swalWithBootstrapButtons.fire(
-      '다운로드 성공!',
-      '리소스팩을 다운로드했습니다!',
-      'success'
-      location.href = "http://download1323.mediafire.com/436p00vrbbkg/w5wdswd2kct5kyd/castors+pvp+resourcepack+%282%29.zip";
-    )
-  } else if (
-    /* Read more about handling dismissals below */
-    result.dismiss === Swal.DismissReason.cancel
-  ) {
-    swalWithBootstrapButtons.fire(
-      '취소됨',
-      '성공적으로 취소되었습니다',
+  if (result.isConfirmed) {
+    Swal.fire(
+      'Deleted!',
+      'Your file has been deleted.',
       'success'
     )
   }
@@ -46,6 +28,6 @@ swalWithBootstrapButtons.fire({
   }
   </script>
   <body>
-  <button class="Resourcepackdownloadbutton" target="_blank" onclick="checkdownload();">Castor's PvP Resourcepack Download</button>
+  <button class="Resourcepackdownloadbutton" target="_blank" onclick="checkdownload();">Castor's PvP Resourcepack Download</a>
   </body>
 </html>
